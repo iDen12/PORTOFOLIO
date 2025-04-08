@@ -829,4 +829,23 @@
     background: linear-gradient(to bottom, #000000, #1a1a1a, #333333); /* gradasi halus */
     color: #ffffff;
   }
-  
+  /* Sembunyikan seluruh konten untuk layar kecil */
+@media (max-width: 991px) {
+  body {
+    display: none;
+  }
+
+  body::before {
+    content: "This portfolio is best viewed on desktop.";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background-color: #111;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
